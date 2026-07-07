@@ -1,5 +1,5 @@
 # Reads .env, creates the GitHub repo (if needed), and pushes.
-# The token is used only for this push — it is NOT saved in .git/config.
+# The token is used only for this push; it is NOT saved in .git/config.
 # Usage:  powershell -ExecutionPolicy Bypass -File .\push-to-github.ps1
 
 $ErrorActionPreference = "Stop"
@@ -24,7 +24,7 @@ if (-not $pat  -or $pat  -eq "paste-your-token-here") { throw "Set GITHUB_PAT in
 if (-not $user -or $user -eq "your-github-username")  { throw "Set GITHUB_USERNAME in .env" }
 if (-not $repo) { throw "Set GITHUB_REPO in .env" }
 
-# Accept either a bare repo name or a full URL for GITHUB_REPO — normalize to the name.
+# Accept either a bare repo name or a full URL for GITHUB_REPO; normalize to the name.
 if ($repo -match 'github\.com[:/][^/]+/([^/]+?)(\.git)?/?$') { $repo = $Matches[1] }
 $repo = $repo -replace '\.git$', ''
 
@@ -33,7 +33,7 @@ $headers = @{ Authorization = "Bearer $pat"; "User-Agent" = "SnapMeal-deploy"; A
 # --- Create the repo if it doesn't exist ---
 try {
     Invoke-RestMethod -Method Get -Uri "https://api.github.com/repos/$user/$repo" -Headers $headers | Out-Null
-    Write-Host "Repo $user/$repo already exists — pushing to it."
+    Write-Host "Repo $user/$repo already exists; pushing to it."
 } catch {
     Write-Host "Creating repo $user/$repo ..."
     $body = @{ name = $repo; private = $false } | ConvertTo-Json
@@ -50,4 +50,4 @@ $authUrl = "https://$($user):$($pat)@github.com/$user/$repo.git"
 git push $authUrl main
 Write-Host ""
 Write-Host "Pushed to https://github.com/$user/$repo"
-Write-Host "Next: import this repo at https://vercel.com/new (no build settings needed — it's static)."
+Write-Host "Next: import this repo at https://vercel.com/new (no build settings needed; it is static)."

@@ -24,6 +24,10 @@ if (-not $pat  -or $pat  -eq "paste-your-token-here") { throw "Set GITHUB_PAT in
 if (-not $user -or $user -eq "your-github-username")  { throw "Set GITHUB_USERNAME in .env" }
 if (-not $repo) { throw "Set GITHUB_REPO in .env" }
 
+# Accept either a bare repo name or a full URL for GITHUB_REPO — normalize to the name.
+if ($repo -match 'github\.com[:/][^/]+/([^/]+?)(\.git)?/?$') { $repo = $Matches[1] }
+$repo = $repo -replace '\.git$', ''
+
 $headers = @{ Authorization = "Bearer $pat"; "User-Agent" = "SnapMeal-deploy"; Accept = "application/vnd.github+json" }
 
 # --- Create the repo if it doesn't exist ---

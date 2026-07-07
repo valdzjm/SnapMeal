@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<defs>
+<linearGradient id="blueGrad" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#2fd4ff"></stop><stop offset="0.45" stop-color="#1e8fff"></stop><stop offset="1" stop-color="#0b6fdb"></stop>
+</linearGradient>
+<linearGradient id="inkGrad" x1="0" y1="0" x2="0.6" y2="1">
+<stop offset="0" stop-color="#565c66"></stop><stop offset="0.35" stop-color="#1a1d22"></stop><stop offset="1" stop-color="#050608"></stop>
+</linearGradient>
+<linearGradient id="cyanGrad" x1="0" y1="1" x2="0" y2="0">
+<stop offset="0" stop-color="#1e8fff"></stop><stop offset="1" stop-color="#2fd4ff"></stop>
+</linearGradient>
+<filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+<feGaussianBlur stdDeviation="7" result="b"></feGaussianBlur><feMerge><feMergeNode in="b"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge>
+</filter>
+<filter id="drop" x="-30%" y="-30%" width="160%" height="160%">
+<feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000000" flood-opacity="0.45"></feDropShadow>
+</filter>
+</defs>
+
+<g filter="url(#glow)" stroke="url(#cyanGrad)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M270 196 V72" stroke-width="14"></path>
+<path d="M270 156 L230 112 V92" stroke-width="12"></path>
+<path d="M270 166 L318 118 V102" stroke-width="12"></path>
+<circle cx="270" cy="58" r="14" stroke-width="10" fill="#0a0f1a"></circle>
+<circle cx="230" cy="78" r="11" stroke-width="9" fill="#0a0f1a"></circle>
+<circle cx="318" cy="88" r="11" stroke-width="9" fill="#0a0f1a"></circle>
+<circle cx="270" cy="196" r="10" stroke-width="8" fill="#0a0f1a"></circle>
+</g>
+
+<g filter="url(#drop)">
+<path d="M252 226 L120 226 L120 322 L240 322 L240 418 L92 418" fill="none" stroke="#dfe6ee" stroke-width="66" stroke-linejoin="miter"></path>
+<path d="M252 226 L120 226 L120 322 L240 322 L240 418 L92 418" fill="none" stroke="url(#inkGrad)" stroke-width="52" stroke-linejoin="miter"></path>
+<path d="M252 203 L120 203" stroke="#8b929c" stroke-width="6"></path>
+</g>
+
+<g filter="url(#drop)">
+<path d="M284 458 L284 240 L360 348 L436 240 L436 458" fill="none" stroke="#06263f" stroke-width="64" stroke-linejoin="miter"></path>
+<path d="M284 458 L284 240 L360 348 L436 240 L436 458" fill="none" stroke="url(#blueGrad)" stroke-width="50" stroke-linejoin="miter"></path>
+<path d="M289 245 L360 346 L431 245" stroke="#7ee7ff" stroke-width="5" fill="none" opacity="0.8"></path>
+</g>
+</svg>

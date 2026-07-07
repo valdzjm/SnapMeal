@@ -1,0 +1,96 @@
+/* SnapMeal — design tokens (from JMV Design System)
+   Dark-first tech palette: electric blue + gloss black. */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  /* Base scale */
+  --blue-300: #7cc4ff;
+  --blue-400: #38a1ff;
+  --blue-500: #1e8fff;
+  --blue-600: #0b6fdb;
+  --blue-700: #0a56ab;
+  --cyan-400: #2fd4ff;
+
+  --ink-950: #06090f;
+  --ink-900: #0a0f1a;
+  --ink-850: #0d1524;
+  --ink-800: #111c30;
+  --ink-700: #1a2a45;
+  --ink-600: #2a3d5c;
+
+  --gray-100: #eef3fa;
+  --gray-300: #c2cfe0;
+  --gray-500: #8296b3;
+  --gray-600: #5d7191;
+
+  --green-500: #2fd48a;
+  --amber-500: #ffb84d;
+  --red-500: #ff5d5d;
+
+  /* Semantic — surfaces */
+  --surface-page: var(--ink-900);
+  --surface-section: var(--ink-950);
+  --surface-card: var(--ink-850);
+  --surface-raised: var(--ink-800);
+  --surface-chip: rgba(30, 143, 255, 0.10);
+
+  /* Semantic — text */
+  --text-heading: #ffffff;
+  --text-body: var(--gray-300);
+  --text-muted: var(--gray-500);
+  --text-accent: var(--blue-400);
+  --text-on-accent: #ffffff;
+
+  /* Semantic — accents & borders */
+  --accent: var(--blue-500);
+  --accent-strong: var(--blue-600);
+  --accent-soft: rgba(30, 143, 255, 0.14);
+  --border-subtle: rgba(130, 150, 179, 0.16);
+  --border-accent: rgba(30, 143, 255, 0.45);
+
+  /* Status */
+  --status-success: var(--green-500);
+  --status-warning: var(--amber-500);
+  --status-danger: var(--red-500);
+  --rating-star: #ffc93c;
+
+  /* Signature gradients (logo gloss) */
+  --gradient-accent: linear-gradient(135deg, #2fd4ff 0%, #1e8fff 45%, #0b6fdb 100%);
+  --gradient-hero: radial-gradient(1200px 600px at 70% -10%, rgba(30,143,255,0.18), transparent 60%), var(--ink-900);
+  --glow-accent: 0 0 24px rgba(30, 143, 255, 0.35);
+
+  /* Typography */
+  --font-display: 'Space Grotesk', 'Segoe UI', sans-serif;
+  --font-body: 'Manrope', 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Consolas', monospace;
+
+  --text-hero: 600 clamp(40px, 5.4vw, 64px)/1.06 var(--font-display);
+  --text-h2: 600 clamp(28px, 3.2vw, 40px)/1.15 var(--font-display);
+  --text-h3: 600 22px/1.3 var(--font-display);
+  --text-h4: 600 17px/1.35 var(--font-display);
+  --text-body-lg: 400 18px/1.65 var(--font-body);
+  --text-body-md: 400 15px/1.65 var(--font-body);
+  --text-body-sm: 400 13px/1.55 var(--font-body);
+  --text-eyebrow: 600 12px/1.2 var(--font-mono);
+  --text-stat: 700 clamp(32px, 3.4vw, 44px)/1 var(--font-display);
+  --tracking-eyebrow: 0.18em;
+
+  /* Spacing, radii, shadows, motion */
+  --space-1: 4px;  --space-2: 8px;  --space-3: 12px; --space-4: 16px;
+  --space-5: 24px; --space-6: 32px; --space-7: 48px; --space-8: 64px; --space-9: 96px;
+  --section-pad: clamp(64px, 9vw, 120px);
+  --container-max: 1140px;
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-pill: 999px;
+
+  --shadow-card: 0 8px 30px rgba(3, 8, 16, 0.45);
+  --shadow-raised: 0 14px 44px rgba(3, 8, 16, 0.6);
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-fast: 160ms;
+  --dur-med: 280ms;
+}

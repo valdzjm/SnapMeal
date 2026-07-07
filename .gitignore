@@ -1,0 +1,22 @@
+# Secrets — never commit these
+.env
+.env.local
+.env.*.local
+*.pat
+*.token
+
+# Dependencies
+node_modules/
+
+# Vercel
+.vercel/
+
+# Claude Code local settings (machine-specific)
+.claude/settings.local.json
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.log
+.idea/
+.vscode/
